@@ -1,0 +1,36 @@
+In this experiment, we created a minimal, clean web interface for a simple bank account balance display with interactive buttons for "Deposit" and "Withdraw." The project combines HTML and CSS to build a visually appealing and user-friendly layout.
+
+1. HTML Structure
+The webpage is structured using semantic and straightforward HTML elements.
+
+We included a container <div> with the class outer_box to serve as the outer wrapper, which provides padding, rounded corners, and shadow effects to give depth.
+
+Inside it, there is another <div> with the class inner_box, which further organizes the content and contains:
+
+An <h1> element that initially displays the account balance as $0.
+
+Two buttons inside separate <div> elements:
+
+A green "Deposit" button with the class deposit.
+
+A red "Withdraw" button with the class withdraw.
+
+The buttons are placed in separate blocks to make the layout clear and easy to style.
+
+2. CSS Styling
+The body is styled to create a full viewport height layout that centers the content both vertically and horizontally using Flexbox (display: flex, justify-content: center, align-items: center).
+
+The background color of the page is a subtle light gray (#e0e0e0) for a clean and modern look.
+
+The .outer_box uses a semi-transparent light gray background (#adaaaaf6), padding, rounded corners, and a subtle shadow to separate it visually from the background.
+
+The .inner_box has a white background with padding, rounded corners, and a soft shadow, making it stand out inside the outer box.
+
+The <h1> displays the balance in large, dark text centered within the box.
+
+Buttons are styled with padding, margin, no borders, rounded corners, and a pointer cursor to indicate interactivity.
+
+The .deposit button uses a green background (#28a745) and white text to symbolize adding money.
+
+The .withdraw button uses a red background (#dc3545) and white text to represent removing money.
+
