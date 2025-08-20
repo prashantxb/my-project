@@ -1,0 +1,1 @@
+This is a basic web page that counts how many characters you type into  text box. As you type, the number updates live using JavaScript.
