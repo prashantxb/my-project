@@ -1,0 +1,1 @@
+This code displays a product list with categories and a dropdown filter Users can select a category to dynamically show only the matching products
