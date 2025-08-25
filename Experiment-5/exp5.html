@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Filter</title>
+</head>
+<body>
+  <h2>Product List</h2>
+  <select id="filter">
+    <option value="all">All</option>
+    <option value="clothing">Clothing</option>
+    <option value="books">Books</option>
+  </select>
+
+  <ul id="products">
+    <li data-category="clothing">T-Shirt</li>
+    <li data-category="clothing">Jeans</li>
+    <li data-category="books">Novel</li>
+    <li data-category="books">Cookbook</li>
+  </ul>
+
+  <script>
+    document.getElementById("filter").onchange = function() {
+      let category = this.value;
+      document.querySelectorAll("#products li").forEach(item => {
+        item.style.display = (category === "all" || item.dataset.category === category) ? "" : "none";
+      });
+    };
+  </script>
+</body>
+</html>
