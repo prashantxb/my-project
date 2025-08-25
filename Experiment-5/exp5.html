@@ -1,30 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>Product Filter</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Product Filter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        
+        .container {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .product {
+            background: #f9f9f9;
+            margin: 5px 0;
+            padding: 8px;
+            border-radius: 4px;
+        }
+        
+        select {
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+    </style>
 </head>
+
 <body>
-  <h2>Product List</h2>
-  <select id="filter">
-    <option value="all">All</option>
-    <option value="clothing">Clothing</option>
-    <option value="books">Books</option>
-  </select>
 
-  <ul id="products">
-    <li data-category="clothing">T-Shirt</li>
-    <li data-category="clothing">Jeans</li>
-    <li data-category="books">Novel</li>
-    <li data-category="books">Cookbook</li>
-  </ul>
+    <div class="container">
+        <h2>Product List</h2>
+        <label for="categoryFilter">Filter by Category:</label>
+        <select id="categoryFilter">
+      <option value="All">All</option>
+      <option value="Clothing">Clothing</option>
+      <option value="Electronics">Electronics</option>
+      <option value="Books">Books</option>
+    </select>
 
-  <script>
-    document.getElementById("filter").onchange = function() {
-      let category = this.value;
-      document.querySelectorAll("#products li").forEach(item => {
-        item.style.display = (category === "all" || item.dataset.category === category) ? "" : "none";
-      });
-    };
-  </script>
+        <div id="productList"></div>
+    </div>
+
+    <script>
+        // Array of product objects
+        const products = [{
+            name: "T-Shirt",
+            category: "Clothing"
+        }, {
+            name: "Jeans",
+            category: "Clothing"
+        }, {
+            name: "Headphones",
+            category: "Electronics"
+        }, {
+            name: "Smartphone",
+            category: "Electronics"
+        }, {
+            name: "Novel",
+            category: "Books"
+        }, {
+            name: "Cookbook",
+            category: "Books"
+        }];
+
+        const productList = document.getElementById("productList");
+        const categoryFilter = document.getElementById("categoryFilter");
+
+        // Function to display products
+        function displayProducts(category) {
+            productList.innerHTML = ""; // clear previous list
+
+            const filteredProducts = products.filter(product =>
+                category === "All" || product.category === category
+            );
+
+            filteredProducts.forEach(product => {
+                const div = document.createElement("div");
+                div.classList.add("product");
+                div.textContent = product.name;
+                productList.appendChild(div);
+            });
+        }
+
+        // Initial display
+        displayProducts("All");
+
+        // Event listener for filter change
+        categoryFilter.addEventListener("change", (e) => {
+            displayProducts(e.target.value);
+        });
+    </script>
+
 </body>
+
 </html>

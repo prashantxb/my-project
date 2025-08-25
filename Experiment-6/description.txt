@@ -1,0 +1,1 @@
+This code creates a basic SVG drawing tool using HTML, CSS, and JavaScript. It allows the user to draw freehand lines inside an SVG area by clicking and dragging the mouse. A new path begins on mouse down, extends as the mouse moves, and stops when the mouse is released or leaves the area
