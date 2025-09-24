@@ -1,0 +1,1 @@
+Build a Node.js + Express.js app for a ticket booking system with in-memory seat management. It should allow viewing seats, locking seats (with 1-minute expiry), and confirming bookings while preventing double booking through proper locking logic
