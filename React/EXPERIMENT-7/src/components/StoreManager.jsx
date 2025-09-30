@@ -1,6 +1,6 @@
-export default function ProductCard({ name, price, status }) {
+export default function StoreManager({ name, price, status }) {
   return (
-    <div className="product-card">
+    <div className="Online store">
       <h3>{name}</h3>
       <p>Price: ${price}</p>
       <p>Status: {status}</p>
