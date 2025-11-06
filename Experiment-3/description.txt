@@ -1,1 +1,0 @@
-You created a simple admin dashboard layout that changes between light and dark themes using a hidden checkbox. The layout uses CSS Grid, and color themes are handled using CSS variables.

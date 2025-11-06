@@ -1,7 +1,9 @@
 :root{
-    --bg-header: rgb(117, 228, 117);
+   --bg-header: rgb(117, 228, 117);
     --bg-footer:rgb(117, 228, 117);
     --bg-nav: rgb(218, 198, 198);
+    --bg-main: white;
+    --bg-text:black;
 
 }
 input[type="checkbox"] {
@@ -11,7 +13,7 @@ input[type="checkbox"] {
 
 
 *{
-    margin: 10px;
+    margin: 1px;
     padding: 0;
      box-sizing: border-box;
 }
@@ -29,6 +31,7 @@ header{
     display: flex; ;
     background-color: var(--bg-header);
     justify-content: space-between;
+    color:var(--bg-text);
 }
 
 footer{
@@ -36,6 +39,8 @@ footer{
     grid-column: 1 / span 2;
     background-color: var(--bg-footer);
     padding : 10px;
+    border-spacing:100px;
+    color:var(--bg-text);
 
  
 }
@@ -52,6 +57,8 @@ main{
     padding: 20px;;
     border: 1px solid black;
     font-family: 'Courier New', Courier, monospace;
+    background-color: var(--bg-main);
+    color: var(--bg-text);
     
     
 }
@@ -59,10 +66,11 @@ main{
 
 
 input:checked ~  div{
-    --bg-header: rgb(95, 83, 83);
-    --bg-footer:rgb(88, 71, 71);
-    --bg-nav: rgb(96, 91, 91);
-    color: white;
+     --bg-header: rgb(28, 28, 28);
+    --bg-footer:rgb(26, 26, 26);
+    --bg-nav: rgb(49, 49, 49);
+    --bg-main: rgb(0, 0, 0);
+    --bg-text:white; 
 
    
 }
