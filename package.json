@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/prashantxb/my-project/issues"
   },
-  "homepage": "https://github.com/prashantxb/my-project#readme"
+  "homepage": "https://github.com/prashantxb/my-project#readme",
+  "devDependencies": {
+    "vite": "^7.2.2"
+  }
 }
